@@ -128,8 +128,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 6rem;
-  padding-right: 6rem;
+  padding-left: var(--padding-section-left);
+  padding-right: var(--padding-section-right);
 }
 
 .section-goals > p {
@@ -311,6 +311,10 @@
 }
 
 @media (max-width: 767px) {
+  .section-goals {
+    --padding-section-left: 2rem;
+    --padding-section-right: 2rem;
+  }
   .section-about {
     --padding-section-left: 2rem;
     --padding-section-right: 2rem;
