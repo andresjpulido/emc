@@ -56,13 +56,28 @@
 .header {
   display: flex;
   justify-content: space-between;
+  position: absolute;
+  width: 100%;
 }
 
 .section-main {
-  height: calc(100vh - 10rem);
+  height: 100vh;
   display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.section-main-video {
+  width: 60%;
+}
+
+.section-main-text {
+  width: 30%;
+  text-align: center;
 }
 
 .section-main-h2 {
@@ -93,7 +108,7 @@
   font-weight: bold;
   text-transform: capitalize;
   text-align: center;
-  margin: 1rem;
+  margin: 1rem 1rem 1rem 2rem;
   height: 3rem;
 }
 
@@ -166,9 +181,19 @@
   font-family: "ABeeZee";
   height: 100vh;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
   padding-left: 6rem;
+  padding-right: 6rem;
+  gap: 2rem;
+}
+
+.section-about-text {
+  flex: 1 1 40%;
+}
+
+.section-about-img {
+  flex: 1 1 40%;
 }
 
 .section-about-h2 {
@@ -178,8 +203,8 @@
   padding-bottom: 2rem;
 }
 .section-about-p {
-margin-bottom: 1rem;
-line-height: 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.5rem;
 }
 
 .section-invitation {
@@ -196,10 +221,10 @@ line-height: 1.5rem;
   text-align: center;
   font-family: "ABeeZee";
 }
- 
+
 .button {
   background-color: var(--color-fg-primary);
-  color: var(--color-bg-primary);
+  color: var(--color-bg-tertiary);
   border-radius: 5px;
   padding: 1rem;
   border: none;
@@ -211,8 +236,7 @@ line-height: 1.5rem;
 }
 
 .profile-image {
-  width: 200px;
-  max-width: 200px;
+  width: 100%; 
   border-radius: 50%;
 }
 
@@ -246,5 +270,24 @@ line-height: 1.5rem;
 
 .logo-small-circle {
   border-radius: 50%;
-  border: .4rem solid var(--color-fg-primary);
+  border: 0.4rem solid var(--color-fg-primary);
+}
+
+@media (max-width: 767px) {
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+}
+
+/* X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+}
+
+/* XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) {
 }
