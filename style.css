@@ -109,7 +109,7 @@
   text-transform: capitalize;
   text-align: center;
   margin: 1rem 1rem 1rem 2rem;
-  height: 3rem;
+  height: 4rem;
 }
 
 .section-header-logo {
@@ -294,10 +294,21 @@
 }
 
 @media (max-width: 767px) {
-  .h1{
-    width: initial;
+  .section-invitation-h2{
+    padding: 2rem 3rem 2rem 3rem;
   }
-  .header{
+  .section-header-band {
+    height: 4px;
+  }
+  .h1 {
+    width: initial;
+    font-size: 2.5rem;
+  }
+  .logo-small {
+    width: 5rem;
+    height: 5rem;
+  }
+  .header {
     position: inherit;
   }
   .section-main-text {
