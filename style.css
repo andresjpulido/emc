@@ -294,6 +294,9 @@
 }
 
 @media (max-width: 767px) {
+  .h1{
+    width: initial;
+  }
   .header{
     position: inherit;
   }
