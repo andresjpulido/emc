@@ -37,6 +37,9 @@
 
   --color-font-primary: #333;
   --color-font-secondary: #333;
+
+  --padding-section-left: 6rem;
+  --padding-section-right: 6rem;
 }
 
 .h1 {
@@ -73,6 +76,7 @@
 
 .section-main-video {
   flex: 0 0 60%;
+  padding: 2rem;
 }
 
 .section-main-text {
@@ -143,7 +147,7 @@
 
 .section-testimony {
   background-color: var(--color-bg-secundary);
-  padding: 4rem 6rem;
+  padding: 4rem var(--padding-section-left);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -168,8 +172,19 @@
   height: 100vh;
   padding: 0 2rem 0 2rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
+}
+
+.section-question-image {
+  flex: 1 1 50%;
+  padding: 2rem;
+}
+
+.section-question-text {
+  flex: 1 1 50%;
 }
 
 .section-question-h2 {
@@ -184,8 +199,8 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding-left: 6rem;
-  padding-right: 6rem;
+  padding-left: var(--padding-section-left);
+  padding-right: var(--padding-section-right);
   gap: 2rem;
 }
 
@@ -195,6 +210,7 @@
 
 .section-about-img {
   flex: 1 1 40%;
+  padding: 2rem;
 }
 
 .section-about-h2 {
@@ -224,8 +240,8 @@
 }
 
 .section-form {
-  padding-left: 6rem;
-  padding-right: 6rem;
+  padding-left: var(--padding-section-left);
+  padding-right: var(--padding-section-right);
 }
 
 .section-form > form {
@@ -249,6 +265,7 @@
   padding: 1rem;
   border: none;
   text-transform: capitalize;
+  width: 10rem;
 }
 
 .button:hover {
@@ -294,7 +311,19 @@
 }
 
 @media (max-width: 767px) {
-  .section-invitation-h2{
+  .section-about {
+    --padding-section-left: 2rem;
+    --padding-section-right: 2rem;
+  }
+  .section-testimony {
+    --padding-section-left: 2rem;
+    --padding-section-right: 2rem;
+  }
+  .section-form {
+    --padding-section-left: 2rem;
+    --padding-section-right: 2rem;
+  }
+  .section-invitation-h2 {
     padding: 2rem 3rem 2rem 3rem;
   }
   .section-header-band {
@@ -303,6 +332,7 @@
   .h1 {
     width: initial;
     font-size: 2.5rem;
+    line-height: 2rem;
   }
   .logo-small {
     width: 5rem;
