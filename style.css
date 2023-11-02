@@ -27,6 +27,7 @@
   --color-bg-primary: #fff;
   --color-bg-secundary: #006d88;
   --color-bg-tertiary: #dbff5f;
+  --color-watermark: #30c3cb59;
 
   --color-fg-primary: #30b3cb;
   --color-fg-secundary: #30c3cb;
@@ -52,6 +53,7 @@
   font-family: "cookie-regular";
   font-weight: normal;
   font-style: normal;
+  text-align: right;
   width: 15rem;
 }
 
@@ -123,6 +125,8 @@
 .section-header-logo {
   display: flex;
   align-items: center;
+  gap: 1rem;
+  padding-right: var(--padding-section-right);
 }
 
 .section-goals {
@@ -154,15 +158,12 @@
 }
 
 .section-goals-watermark {
-  z-index: -1;  
+  z-index: -1;
   position: absolute;
-  bottom: -230px;
-  right: -200px; 
+  bottom: -5px;
+  right: 0px; 
 }
-
-.section-goals-watermark > img{
-  transform: rotate(190deg);
-}
+ 
 
 .section-testimony {
   background-color: var(--color-bg-secundary);
@@ -189,7 +190,7 @@
   color: var(--color-fg-tertiary);
   font-family: "ABeeZee";
   height: 100vh;
-  padding: 0 2rem 0 2rem;
+  padding: 0 4rem 0 2rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -198,8 +199,10 @@
 }
 
 .section-question-image {
-  flex: 0 0 calc(50% - 2rem);
-  padding: 2rem;
+  flex: 0 0 calc(30% - 2rem);
+  padding: 2rem; 
+  display: flex;
+  justify-content: center;
 }
 
 .section-question-text {
@@ -212,7 +215,7 @@
 }
 
 .section-question-color {
-color: var(--color-fg-tertiary);
+  color: var(--color-fg-tertiary);
 }
 
 .section-about {
@@ -257,10 +260,10 @@ color: var(--color-fg-tertiary);
 }
 
 .section-invitation-h2 {
-  color: var(--color-fg-tertiary);
+  color: var(--color-font-primary);
   padding: 2rem 6rem 2rem 6rem;
   text-align: center;
-  font-family: "ABeeZee";
+  font-family: "ABeeZee-italic";
 }
 
 .section-form {
@@ -282,11 +285,31 @@ color: var(--color-fg-tertiary);
   border: 0.1rem var(--color-fg-primary) solid;
 }
 
+.section-contact {
+  background-color: var(--color-bg-secundary);
+  display: flex;
+  padding-left: var(--padding-section-left);
+  flex-direction: column;
+  justify-content: center;
+  height: 50vh;
+  gap: 2rem;
+}
+
+.section-contact > a {
+  color: var(--color-bg-tertiary);
+  font-family: "ABeeZee-italic";
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.section-contact-p {
+}
+
 .button {
   background-color: var(--color-fg-primary);
   color: var(--color-bg-tertiary);
   border-radius: 5px;
-  font-family: 'ABeeZee-italic';
+  font-family: "ABeeZee-italic";
   padding: 1rem;
   border: none;
   text-transform: capitalize;
@@ -326,13 +349,18 @@ color: var(--color-fg-tertiary);
 }
 
 .logo-small {
-  width: 10rem;
+  width: 5rem;
   height: 10rem;
 }
 
 .logo-small-circle {
   border-radius: 50%;
-  border: 0.4rem solid var(--color-fg-primary);
+  width: 130px;
+  border: 0.3rem solid var(--color-fg-secundary);
+}
+
+.emphasize{
+  color: var(--color-fg-tertiary);
 }
 
 @media (max-width: 767px) {
@@ -358,11 +386,7 @@ color: var(--color-fg-tertiary);
   .section-header-band {
     height: 100%;
   }
-  .h1 {
-    width: initial;
-    font-size: 2.5rem;
-    line-height: 2rem;
-  }
+ 
   .logo-small {
     width: 5rem;
     height: 5rem;
